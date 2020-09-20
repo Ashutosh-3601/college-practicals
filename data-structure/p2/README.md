@@ -9,3 +9,8 @@ after [sorting based on the user option](https://github.com/Ashutosh-3601/colleg
 - Your program has to execute for the following test cases
   - Screenshot uploaded in word document.
 - [Write function definition for swap function](https://github.com/Ashutosh-3601/college-practicals/blob/271727fd5bbeb0aa094d8a479c6c74318fb707da/data-structure/p2/bubble-sort.c#L74)
+
+#### Edit
+- [Passing Function](https://github.com/Ashutosh-3601/college-practicals/blob/master/data-structure/p2/bubble-sort-with-function.c) 
+
+*"I wasn't able to do with function as pointer"*
