@@ -66,7 +66,7 @@ int palindrome(){
 
 int main() {
   int choice;
-  printf("\n\n1.\tInsert in stack\n2.\tDelete from stack\n4.\tPalindrome\n5.\tExit\n\n");
+  printf("\n\n1.\tInsert in stack\n2.\tDelete from stack\n3.\tDisplay stack\n4.\tCheck Palindrome\n5.\tExit\n\n");
   while(1){
     printf("\nEnter your choice\n");
     scanf("%d", &choice);
