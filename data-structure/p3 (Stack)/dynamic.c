@@ -39,29 +39,10 @@ void displayStack(int * stackArray) {
   }
 }
 
-/*int palindrome(){
-  if(top == -1) {
-    stackUnderflow();
-    return 0;
-  }
-  else {  
-    int kk;
-    STACK palin[MAX_STACK_SIZE];
-    for(int i=0; i <= top; i++){
-      palin[i].value = stack[top-i].value;
-    }
-    for(int i = 0; i <= top; i++){
-      if(palin[i].value != stack[i].value)
-      return 0;
-    }
-    return 1;
-  }
-}*/
-
 int main() {
   int *stack = malloc(STACK_SIZE*sizeof(int));
   int choice;
-  printf("\n\n1.\tInsert in stack\n2.\tDelete from stack\n3.\tDisplay stack\n4.\tCheck Palindrome\n5.\tExit\n\n");
+  printf("\n\n1.\tInsert in stack\n2.\tDelete from stack\n3.\tDisplay stack\n4.\tExit\n\n");
   while(1){
     printf("\nEnter your choice\n");
     scanf("%d", &choice);
@@ -83,13 +64,7 @@ int main() {
         displayStack(stack);
         break;
       }
-      /*case 4: {
-        int isPalin = palindrome();
-        if(isPalin) printf("YES, it\'s a palindrome\n");
-        else printf("NO, it\'s not a palindrome\n");
-        break;
-      }*/
-      case 5: free(stack); exit(0);
+      case 4: free(stack); exit(0);
       default: printf("\n//Wrong Choice//\n");break;
     }
   }
