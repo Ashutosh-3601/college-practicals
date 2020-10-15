@@ -13,7 +13,7 @@ void stackUnderflow(){
 
 void push(int * stackArray, int * value){
   if(top >= STACK_SIZE-1){
-    stackArray = realloc(stackArray, sizeof(2*STACK_SIZE));
+    stackArray = realloc(stackArray, 2*STACK_SIZE*sizeof(int));
     STACK_SIZE *= 2;
   }
   else if(stackArray == NULL) stackOverflow();
