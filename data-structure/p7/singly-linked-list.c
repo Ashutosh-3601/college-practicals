@@ -1,4 +1,7 @@
-#include<stdio.h> #include<string.h> #include<stdlib.h> struct student  {  
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+struct student {  
 char usn[12]; char name[25]; char branch[25]; int sem;  
 int phone_no;  
 struct student *link;  
@@ -92,8 +95,48 @@ while (temp!=NULL)
  count++;  
 }  
 printf("The number of nodes in SLL=%d\n",count);  
-} 
-void main()  
+}
+
+STUD *insert_middle(STUD *first)
+{
+    STUD *newNode,*temp;
+    int i,pos;
+    printf("enter the position\n");
+    scanf("%d",&pos);
+    newNode = read_data();
+    temp = first;
+    for(i=2;i<pos;i++)
+    {
+        if(temp->link!=NULL)
+        {
+            temp = temp->link;
+        }
+    }
+    newNode->link = temp->link;
+    temp->link = newNode;
+    return first;
+}
+
+STUD *delete_middle(STUD *first)
+{
+    STUD *temp;
+    int i,pos;
+    printf("Enter the position\n");
+    scanf("%d",&pos);
+    temp = first;
+    for(i=2;i<pos;i++)
+    {
+        if(temp->link != NULL)
+        {
+            temp=temp->link;
+        }
+    }
+    temp->link= temp->link->link;
+
+    return first;
+}
+
+int main()  
 {  
 int ch,i,n;  
 STUD *first=NULL;  
@@ -106,7 +149,8 @@ printf("SLL Created Successfully!!!\n");
 display(first);  
 while(1)  
 {  
-printf("1.Display\t2.Insert End\t3:Delete End\nt.Insert Front\t5.Delete Front\t6.Exit\n");  printf("Enter the choice\n");  
+printf("1.Display\t2.Insert End\t3:Delete End\n4.Insert Front\t5.Delete Front\n6.Insert Middle\t7.Delete Middle\t8.Exit\n");
+printf("Enter the choice\n");  
 scanf("%d",&ch);  
 switch(ch)  
  {  
@@ -118,8 +162,12 @@ break;
 case 3: first=delete_end(first); printf("Node deleted at the End\n"); break;  
 case 4: first=insert_front(first); printf("Node Inserted at Front\n");  break;  
 case 5: first=delete_front(first); printf("Node deleted at Front\n");  
-break; 
-case 6: exit(0);  
+break;
+case 6: first=insert_middle(first); printf("Node inserted at middle\n");
+break;
+case 7: first=delete_middle(first); printf("Node deleted at middle\n");
+break;
+case 8: exit(0);  
 break;  
 default:  
 printf("INVALID CHOICE !");   } //end of switch 
