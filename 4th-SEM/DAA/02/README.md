@@ -6,4 +6,6 @@
 <hr>
 
 `b.` Write a Java class called Customer to store their name and date_of_birth. The  date_of_birth format should be dd/mm/yyyy. Write methods to read customer data as and display as using StringTokenizer class considering the delimiter character as “/”.<br>
-🚀 Customer.java ft. StringTokenizer
+[🚀 Customer.java ft. StringTokenizer](https://github.com/Ashutosh-3601/college-practicals/blob/master/4th-SEM/DAA/02/Customer.java)
+
+<hr>
